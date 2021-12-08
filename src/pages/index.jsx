@@ -15,7 +15,7 @@ export default function Home(props) {
 }
 
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await axios.get("http://localhost:3000/api?all")
   const countries = await res.data
 
@@ -23,7 +23,6 @@ export const getStaticProps = async () => {
   return{
     props:{
       countries
-    },
-    revalidate: 604800
+    }
   }
 }
