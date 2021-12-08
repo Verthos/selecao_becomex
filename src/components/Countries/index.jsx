@@ -1,4 +1,5 @@
 import styles from "./contry.module.scss"
+import Image from "next/image"
 
 export function Countries({countries}) {
     
@@ -11,7 +12,7 @@ export function Countries({countries}) {
             
             countries.map(country => {return(
                 <li key={country.name} className={styles.country}>
-                    <img src={country.flags.svg} alt="country_flag" />
+                    <Image src={country.flags.svg} alt="country_flag" />
                     
                     <ul>
                         <li>Nome: {country.name.common}</li>
