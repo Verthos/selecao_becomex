@@ -1,5 +1,4 @@
 import React from "react";
-import ReactPaginate from "react-paginate";
 import styles from "./pagination.module.scss"
 
 export function Pagination(props) {

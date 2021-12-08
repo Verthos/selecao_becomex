@@ -13,18 +13,6 @@ export default function HomePage(props) {
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
-/* 
-    useEffect(()=> {
-        const fetchPosts = async () => {    
-            setFetching(true);
-            const res = await axios.get("http://localhost:3000/api?all");
-            setContryList(res.data);
-            setFetching(false);
-        }
-
-        fetchPosts();
-    },[])
-*/
     
     const indexOfLastCountry = currentPage * countryPerPage;
     const indeOfFirstCountry = indexOfLastCountry - countryPerPage;
