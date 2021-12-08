@@ -1,18 +1,11 @@
-import { Header } from "../components/Header";
-import  HomePage  from "../components/HomePage";
-import { Footer } from "../components/Footer";
 import axios from "axios"
-
+import HomePage from "../components/HomePage"
 
 
 export default function Home(props) {
 
   return (
-    <>
-      <Header/>
       <HomePage countries={props.countries}/>
-      <Footer/>
-    </>
   )
 }
 

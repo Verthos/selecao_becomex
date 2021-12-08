@@ -25,3 +25,24 @@
         border: none;
     }
 }
+
+.filtros{
+    position: absolute;
+    top: -3rem;
+    button{
+        margin: 0 0.2rem;
+        height: 2rem;
+        width: 8rem;
+        background: var(--header-background);
+
+        &:hover{
+            transform: perspective(200px) translateZ(1rem);
+            filter: brightness(1rem);
+            transition: all 0.2s;
+        }
+
+        &.isSelected{
+            background: var(--primary-green);
+        }
+    }
+}

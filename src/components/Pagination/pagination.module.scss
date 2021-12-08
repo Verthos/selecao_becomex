@@ -17,7 +17,8 @@
             width: 2rem;
             height: 2rem;
             border: 1px solid black;
-            background: gray;
+            background: var(--header-background);
+            color: white;
             margin: 0 0.1rem;
             border-radius: 0.2rem;
             &:hover{
@@ -27,7 +28,7 @@
             }
 
             &.isSelected{
-                background: red;
+                background: var(--primary-green);
             }
         }
     }    

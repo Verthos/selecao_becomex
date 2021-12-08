@@ -13,7 +13,7 @@ export function Pagination(props) {
             <ul>
                 {pageNumbers.map(i => (
                     <li key={i}>
-                        <a onClick={() => props.paginate(i)} href="#">{i}</a>
+                        <a onClick={() => props.paginate(i) } href="#">{i}</a>
                     </li>
                 ))}
             </ul>
