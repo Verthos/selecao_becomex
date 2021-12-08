@@ -18,7 +18,7 @@ export default function Home(props) {
 
 
 export const getServerSideProps = async () => {
-  const res = await axios.get("http://localhost:3000/api?all")
+  const res = await axios.get("https://restcountries.com/v3.1/all")
   const countries = await res.data
 
 
