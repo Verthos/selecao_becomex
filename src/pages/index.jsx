@@ -2,6 +2,8 @@ import { Header } from "../components/Header";
 import  HomePage  from "../components/HomePage";
 import { Footer } from "../components/Footer";
 import axios from "axios"
+import x from "./api/"
+
 
 export default function Home(props) {
 
@@ -16,7 +18,7 @@ export default function Home(props) {
 
 
 export const getServerSideProps = async () => {
-  const res = await axios.get("http://localhost:3000/api?all")
+  const res = await axios.get("http://selecao-becomex.vercel.app/api?all")
   const countries = await res.data
 
 
