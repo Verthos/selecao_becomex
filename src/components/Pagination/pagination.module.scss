@@ -1,0 +1,24 @@
+.styledNav{
+
+
+    ul{
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+        width: 40vw;
+        display: flex;
+
+
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            border: 1px solid black;
+            background: gray;
+            margin: 0 0.1rem;
+            border-radius: 0.2rem;
+        }
+    }    
+}
