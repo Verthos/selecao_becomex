@@ -1,4 +1,5 @@
 import React from "react";
+import ReactPaginate from "react-paginate";
 import styles from "./pagination.module.scss"
 
 export function Pagination(props) {
@@ -13,7 +14,7 @@ export function Pagination(props) {
             <ul>
                 {pageNumbers.map(i => (
                     <li key={i}>
-                        <a href="!#">{i}</a>
+                        <a onClick={() => props.paginate(i)} href="#">{i}</a>
                     </li>
                 ))}
             </ul>

@@ -5,7 +5,8 @@
         list-style: none;
         justify-content: center;
         align-items: center;
-        width: 40vw;
+        margin-bottom: 4rem;
+        width: 100%;
         display: flex;
 
 
@@ -19,6 +20,15 @@
             background: gray;
             margin: 0 0.1rem;
             border-radius: 0.2rem;
+            &:hover{
+                transform: perspective(200px) translateZ(1rem);
+                filter: brightness(1rem);
+                transition: all 0.2s;
+            }
+
+            &.isSelected{
+                background: red;
+            }
         }
     }    
 }

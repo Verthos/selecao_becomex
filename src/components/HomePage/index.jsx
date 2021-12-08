@@ -1,19 +1,19 @@
 import React from "react";
 import styles from "./home.module.scss"
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { Contry } from "../Country";
+import { useState } from "react";
+import { Countries } from "../Countries";
 import { Pagination } from "../Pagination";
 
 
-export default function HomePage({text}) {
+export default function HomePage(props) {
 
-    const [contryList, setContryList] = useState([]);
-    const [fetching, setFetching] = useState(false);
+    const [countryList, setCountryList] = useState(props.countries)
     const [currentPage, setCurrentPage] = useState(1);
-    const [countryPerPage, setContryPerPage] = useState(20)
+    const [countryPerPage] = useState(20)
 
+    const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
+/* 
     useEffect(()=> {
         const fetchPosts = async () => {    
             setFetching(true);
@@ -24,34 +24,19 @@ export default function HomePage({text}) {
 
         fetchPosts();
     },[])
-
+*/
     
-
     const indexOfLastCountry = currentPage * countryPerPage;
     const indeOfFirstCountry = indexOfLastCountry - countryPerPage;
-    const currentCountryPagination = contryList.slice(indeOfFirstCountry, indexOfLastCountry);
-   
-
-
+    const currentCountryPagination = props.countries.slice(indeOfFirstCountry, indexOfLastCountry);
 
     return(
         
-        <main className={styles.home}>
-            <h1>{text}</h1>
-            {currentCountryPagination.map(contry => <Contry loading={fetching} key={contry.name.common} flag={contry.flags.svg} name={contry.name.common}/>)}
-            <Pagination countryPerPage={countryPerPage} totalCountries={contryList.lengh}></Pagination>
-
-        </main>
+        <div className={styles.home}>
+            <Pagination paginate={paginate} countryPerPage={countryPerPage}></Pagination>
+            <Countries countries={currentCountryPagination}/>
+            
+            
+        </div>
     )
-
-
-}
-
-export const getServerSideProps = async () => {
-    return {
-        props: {
-            text: "test"
-        }
-    }
-
 }
