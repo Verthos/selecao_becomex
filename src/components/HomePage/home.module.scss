@@ -4,3 +4,24 @@
     min-height: 50vh;
     background: var(--gray-100);
 }
+
+.search{
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    input{
+        width: 60%;
+        padding: 1rem;
+    }
+    button{
+        width: 20%;
+        color: white;
+        font-weight: bolder;
+        background: var(--primary-green);
+        border: none;
+    }
+}

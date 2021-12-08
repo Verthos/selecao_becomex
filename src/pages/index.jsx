@@ -18,7 +18,7 @@ export default function Home(props) {
 
 
 export const getServerSideProps = async () => {
-  const res = await axios.get("https://restcountries.com/v3.1/all")
+  const res = await axios.get("https://selecao-becomex.vercel.app/api?all")
   const countries = await res.data
 
 
