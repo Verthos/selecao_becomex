@@ -56,13 +56,7 @@ export default function HomePage(props) {
         <div className={styles.home}>
             
             <div className={styles.search}>
-                <div className={styles.filtros}>
-                    {buttons.map(button => {return(<button key={button} className={isSelected === button ? styles.isSelected: ""} onClick={() => handleFilterType(button)}>{button}</button>)})}
-                </div>
-                <input  placeholder="Digite aqui..." type="text" onChange={(event) => setArgument(event.target.value)}/>
-                <button onClick={() => handleFilter(argument)}>
-                    Pesquisar
-                </button>
+                Sou eu
             </div>
 
             <Pagination paginate={paginate} countryPerPage={countryPerPage}></Pagination>
