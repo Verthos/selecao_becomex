@@ -9,8 +9,8 @@ export function Countries({countries}) {
 
             {            
             countries.map(country => {return(
-                <a className={styles.card} href={`/${country.name.common}`}>
-                    <li key={country.name} className={styles.country}>
+                <a key={country.name} className={styles.card} href={`/${country.name.common}`}>
+                    <li  className={styles.country}>
                         <img src={country.flags.svg} alt="country_flag" />
                         
                         <ul>

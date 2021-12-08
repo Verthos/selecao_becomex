@@ -16,8 +16,8 @@ export default function Country({country}){
               <li>{country.currencies[Object.keys(country.currencies)[0]].name} </li>
               <li>{country.currencies[Object.keys(country.currencies)[1]]?.name} </li>
           </ul>
-          <ul>{country.borders.map(border => {return(<li>{border}</li>)})}</ul>
-          <ul>Time-zones: {country.timeZone.map(time => {return(<li>{time}</li>)})}</ul>
+          <ul>{country.borders.map(border => {return(<li key={border}>{border}</li>)})}</ul>
+          <ul>Time-zones: {country.timeZone.map(time => {return(<li key={time}>{time}</li>)})}</ul>
         </content>
       </div>
     )
