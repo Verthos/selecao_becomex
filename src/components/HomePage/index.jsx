@@ -46,7 +46,7 @@ export default function HomePage(props) {
 
     useEffect(() => {
         setCurrentCountryPagination(props.countries.slice(indeOfFirstCountry, indexOfLastCountry))
-    },[currentPage, setCurrentCountryPagination])
+    },[currentPage, setCurrentCountryPagination, indeOfFirstCountry])
 
 
 
