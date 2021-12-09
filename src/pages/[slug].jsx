@@ -9,14 +9,15 @@ export default function Country({country}){
         <img src={country.flags} alt="country_flag" />
 
         <content>
-          <h1>Nome: {country.name}</h1>
-          <h1>Capital: {country.capital}</h1>
-          <h1>População: {country.population}</h1>
-          <ul>Moedas: 
-              <li>{country.currencies[Object.keys(country.currencies)[0]].name} </li>
-              <li>{country.currencies[Object.keys(country.currencies)[1]]?.name} </li>
-          </ul>
-          <ul>{country.borders.map(border => {return(<li key={border}>{border}</li>)})}</ul>
+          <div className={styles.mainInformation}>
+            <li>Nome: {country.name}</li>
+            <li>Capital: {country.capital}</li>
+            <li>População: {Intl.NumberFormat().format(country.population)}</li>
+            <li>Moeda: {country.currencies[Object.keys(country.currencies)[0]].symbol} {country.currencies[Object.keys(country.currencies)[0]].name} </li>
+            <li>{country.currencies[Object.keys(country.currencies)[1]]?.name} </li>
+          </div>
+         
+          <ul> Faz divisa com: {country.borders.map(border => {return(<li key={border}>{border}</li>)})}</ul>
           <ul>Time-zones: {country.timeZone.map(time => {return(<li key={time}>{time}</li>)})}</ul>
         </content>
       </div>

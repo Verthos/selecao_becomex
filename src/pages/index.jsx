@@ -1,19 +1,19 @@
 import axios from "axios"
 import React, {useState, useEffect}from "react"
-import HomePage from "../components/HomePage"
 import styles from "../components/HomePage/home.module.scss"
 import { Pagination } from "../components/Pagination"
 import { Countries } from "../components/Countries"
 
 export default function Home(props) {
 
-    const [countryList, setCountryList] = useState(props.countries)
+
+    const buttons = ["Todos", "Nome", "Sigla", "Moeda"]
+    const [countryList] = useState(props.countries)
     const [currentPage, setCurrentPage] = useState(1);
     const [filterType, setFilterType] = useState("Nome")
     const [argument, setArgument] = useState("")
-    const buttons = ["Todos", "Nome", "Sigla", "Moeda"]
+    
     const [isSelected, setIsSelected] = useState("Todos");
-
     const [countryPerPage] = useState(10)    
     const indexOfLastCountry = currentPage * countryPerPage;
     const indeOfFirstCountry = indexOfLastCountry - countryPerPage;

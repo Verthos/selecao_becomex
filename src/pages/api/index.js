@@ -2,6 +2,9 @@ import { connectToDatabase } from "../../utils/mongodb";
 
 
 
+
+
+
 const handler = async (req, res) => {
     
     //MongoDb conection
@@ -21,7 +24,7 @@ const handler = async (req, res) => {
     if(method === "GET"){
         res.status(200).json(newResponse)
     } else {
-        res.status(400).json({message: "erro, a API aceita apenas o metodo GET."})
+        res.status(400).json({message: "erro, este endpoing aceita apenas o metodo GET."})
     }
 };
 

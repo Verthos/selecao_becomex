@@ -1,24 +1,61 @@
 .container{
+    
     min-width: 50rem;
+    min-height: 60vh;
+    padding-top: 5rem;
+    line-height: 2rem;
+    
     display: flex;
     justify-content: center;
+
+    content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 1.5fr;
+        margin-left: 2rem;
+
+        .mainInformation{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            font-size: 1.4rem;
+            li{
+                list-style: none;
+            }
+        }
+
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            width: 10rem;
+            list-style: none;
+                li{
+                    margin: 0.2rem
+                }
+        }
+
+    }
+
     
 
     img{
         width: 30rem;
         height: 20rem;
         object-fit: cover;
+        box-shadow: 0px 0px 1rem 0px black;
+
+        &:hover{
+            transform: perspective(200px) translateZ(0.2rem);
+            transition: all 0.5s
+        }
     }
 
     ul{
-        display: flex;
-        flex-wrap: wrap;
-        width: 10rem;
-        list-style: none;
-            li{
-                margin: 0.2rem
-            }
-        
-        
+        height: 12rem;
+
+        li{
+            margin-top: 2rem;
+        }
     }
+
 }
+
